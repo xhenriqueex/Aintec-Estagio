@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <link href='../includes/icons.css' rel="stylesheet">
+  <link href="../includes/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <script src="../includes/vue.js"></script>
+  <script src="../includes/vuetify.js"></script>
+  <script src="../includes/menu.js"></script>
+</head>
+<body>
+  <div id="app">
+    <v-app>
+        <options menutitle="Login"></options>
+        <v-form>
+          <v-container fluid>
+            <v-layout align-center justify-center column>
+
+                <v-flex xs4 sm4 md4 lg2>
+                    <v-text-field
+                        label="Usuário"
+                        value=""
+                    ></v-text-field>
+                </v-flex>
+
+                <v-flex xs4 sm4 md4 lg2>
+                    <v-text-field
+                        label="Senha"
+                        type="password"
+                        value=""
+                    ></v-text-field>
+                </v-flex>
+                
+                <v-flex lg1>
+                    <v-btn color="success">Entrar</v-btn>
+                </v-flex>
+            </v-layout>
+          </v-container>
+        </v-form>
+    </v-app>
+  </div>
+
+  <script src="./login.js"></script>
+</body>
+</html>
