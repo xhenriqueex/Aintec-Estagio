@@ -1,0 +1,340 @@
+INSERT INTO departamento VALUES (
+	1,
+	'Ciências Sociais',
+	3
+);
+
+INSERT INTO departamento VALUES (
+	2,
+	'Filosofia',
+	3
+);
+
+INSERT INTO departamento VALUES (
+	3,
+	'História',
+	3
+);
+
+INSERT INTO departamento VALUES (
+	4,
+	'Letras Estrangeiras e Modernas',
+	3
+);
+
+INSERT INTO departamento VALUES (
+	5,
+	'Letras Vernáculas e Clássicas',
+	3
+);
+
+INSERT INTO departamento VALUES (
+	6,
+	'Anatomia',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	7,
+	'Biologia Animal e Vegetal ',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	8,
+	'Biologia Geral',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	9,
+	'Ciências Fisiológicas',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	10,
+	'Ciências Patológicas',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	11,
+	'Psicologia e Psicanálise',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	12,
+	'Histologia',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	13,
+	'Microbiologia',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	14,
+	'Psicol. Geral e Análise do Comportamento',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	15,
+	'Psicologia Social e Institucional',
+	4
+);
+
+INSERT INTO departamento VALUES (
+	16,
+	'Bioquímica e Biotecnologia',
+	1
+);
+
+INSERT INTO departamento VALUES (
+	17,
+	'Computação',
+	1
+);
+
+INSERT INTO departamento VALUES (
+	18,
+	'Física',
+	1
+);
+
+INSERT INTO departamento VALUES (
+	19,
+	'Geociências',
+	1
+);
+
+INSERT INTO departamento VALUES (
+	20,
+	'Matemática',
+	1
+);
+
+INSERT INTO departamento VALUES (
+	21,
+	'Estatística',
+	1
+);
+
+INSERT INTO departamento VALUES (
+	22,
+	'Química',
+	1
+);
+
+INSERT INTO departamento VALUES (
+	23,
+	'Administração',
+	5
+);
+
+INSERT INTO departamento VALUES (
+	24,
+	'Ciências Contábeis',
+	5
+);
+
+INSERT INTO departamento VALUES (
+	25,
+	'Direito Privado',
+	5
+);
+
+INSERT INTO departamento VALUES (
+	26,
+	'Direito Público',
+	5
+);
+
+INSERT INTO departamento VALUES (
+	27,
+	'Economia',
+	5
+);
+
+INSERT INTO departamento VALUES (
+	28,
+	'Serviço Social',
+	5
+);
+
+INSERT INTO departamento VALUES (
+	29,
+	'Ciências Farmacêuticas',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	30,
+	'Clínica Cirúrgica',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	31,
+	'Clínica Médica',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	32,
+	'Enfermagem',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	33,
+	'Fisioterapia',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	34,
+	'Ginecologia e Obstetrícia',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	35,
+	'Medicina Oral e Odontologia Infantil',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	36,
+	'Odontologia Restauradora',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	37,
+	'Patologia, Análises Clínicas e Toxicológicas',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	38,
+	'Pediatria e Cirurgia Pediátrica',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	39,
+	'Saúde Coletiva',
+	6
+);
+
+INSERT INTO departamento VALUES (
+	40,
+	'Educação',
+	7
+);
+
+INSERT INTO departamento VALUES (
+	41,
+	'Ciência da Informação (Arquivologia,Biblioteconomia)',
+	7
+);
+
+INSERT INTO departamento VALUES (
+	42,
+	'Música e Teatro',
+	7
+);
+
+INSERT INTO departamento VALUES (
+	43,
+	'Design',
+	7
+);
+
+INSERT INTO departamento VALUES (
+	44,
+	'Arte Visual',
+	7
+);
+
+INSERT INTO departamento VALUES (
+	45,
+	'Comunicação',
+	7
+);
+
+INSERT INTO departamento VALUES (
+	46,
+	'Agronomia',
+	2
+);
+
+INSERT INTO departamento VALUES (
+	47,
+	'Clínicas Veterinárias',
+	2
+);
+
+INSERT INTO departamento VALUES (
+	48,
+	'Medicina Veterinária Preventiva',
+	2
+);
+
+INSERT INTO departamento VALUES (
+	49,
+	'Ciência e Tecnologia de Alimentos',
+	2
+);
+
+INSERT INTO departamento VALUES (
+	50,
+	'Zootecnia',
+	2
+);
+
+INSERT INTO departamento VALUES (
+	51,
+	'Arquitetura e Urbanismo',
+	9
+);
+
+INSERT INTO departamento VALUES (
+	52,
+	'Construção Civil',
+	9
+);
+
+INSERT INTO departamento VALUES (
+	53,
+	'Engenharia Elétrica',
+	9
+);
+
+INSERT INTO departamento VALUES (
+	54,
+	'Estruturas',
+	9
+);
+
+INSERT INTO departamento VALUES (
+	55,
+	'Educação Física',
+	8
+);
+
+INSERT INTO departamento VALUES (
+	56,
+	'Ciência do Esporte',
+	8
+);
+INSERT INTO departamento VALUES (
+	57,
+	'Estudos do Movimento Humano',
+	8
+);
