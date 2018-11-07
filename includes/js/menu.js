@@ -32,10 +32,31 @@ Vue.component('header-logged', {
         return {
             drawer: false,
             menu: [
-                { title: "Pessoa física", icon: "", options: [["Consulta", "assignment"], ["Cadastrar", "person_add"]] },
-                { title: "Docente", icon: "", options: [["Consulta", "assignment"], ["Cadastrar", "person_add"]] },
-                { title: "Pessoa jurídica", icon: "", options: [["Consulta", "assignment"], ["Cadastrar", "person_add"]] }
-						],
+                {
+                    title:"Pessoa física",
+                    icon: "",
+                    options: [
+                        ["Consulta", "assignment"],
+                        ["Cadastrar", "person_add"]
+                    ]
+                },
+                {
+                    title: "Docente",
+                    icon: "",
+                    options: [
+                        ["Consulta", "assignment"],
+                        ["Cadastrar", "person_add"]
+                    ]
+                },
+                {
+                    title: "Pessoa jurídica",
+                    icon: "",
+                    options: [
+                        ["Consulta", "assignment"],
+                        ["Cadastrar", "person_add", "/aintec/cad_pj/cad_pj.html"]
+                    ]
+                }
+			],
         };
 		},
 
@@ -43,14 +64,24 @@ Vue.component('header-logged', {
 			exit: function() {
 				let params = new URLSearchParams();
 				params.append('switch', 'unlog');
-				axios.post("./includes/php/functions.php", params)
+				axios.post("/aintec/includes/php/functions.php", params)
 				.then(() => {
-					window.location.href = "index.html";
+					window.location.href = "/aintec/index.html";
 				})
 				.catch(error => {
 					console.log(error);
 				});
-			}
+            },
+            
+            redirect: function(path) {
+                if(path != undefined) {
+                    window.location.href = path;
+                }
+                else {
+                    alert("não implementado (cheque menu.js)!");
+                }
+                
+            }
 		},
 
 		props: ['menutitle'],
@@ -85,7 +116,7 @@ Vue.component('header-logged', {
 
                     <v-list-tile
                         v-for="(subItem, j) in item.options"
-                        @click=""
+                        @click="redirect(subItem[2])"
                         :key="'subItem'+j"
                     >
                         <v-list-tile-title v-text="subItem[0]"></v-list-tile-title>

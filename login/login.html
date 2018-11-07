@@ -37,23 +37,23 @@
 			                    type="password"
 			                    v-model="senha"
 			                ></v-text-field>
-									</v-flex>
-								</v-layout>
-						
-					<!-- layout dos botões -->
-					<v-layout align-center justify-center column>
-            <v-flex>
-							<v-btn color="success" @click="verificaExiste()">Entrar</v-btn>
-            </v-flex>
-
-            <v-flex>
-            	<v-btn color="error" onclick='window.location.href = "../cad_usuario/index_cad.html";'>Cadastrar-se</v-btn>
-            </v-flex>
-
-			      <v-flex>
-							<v-btn color="info" onclick='window.location.href = "../esqueci_senha/index_es.html";'>Esqueci minha senha</v-btn>
 						</v-flex>
 					</v-layout>
+						
+				<!-- layout dos botões -->
+				<v-layout align-center justify-center column>
+		            <v-flex>
+						<v-btn color="success" @click="verificaExiste()">Entrar</v-btn>
+		            </v-flex>
+
+		            <v-flex>
+		            	<v-btn color="error" onclick='window.location.href = "../cad_usuario/index_cad.html";'>Cadastrar-se</v-btn>
+		            </v-flex>
+
+					<v-flex>
+						<v-btn color="info" onclick='window.location.href = "../esqueci_senha/index_es.html";'>Esqueci minha senha</v-btn>
+					</v-flex>
+				</v-layout>
 		    </v-container>
 		  </v-form>
 		</v-app>
