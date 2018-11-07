@@ -7,22 +7,6 @@ var a = new Vue({
 		usuario: "",
 		senha: "",
 		conf_senha: "",
-
-		rules: {
-			required: value => !!value || "Campo obrigatório",
-			email: value => {
-				let i = 0;
-
-				while(i < value.length) {
-					if(value[i] === '@') {
-						return true;
-					}
-					i++;
-				}
-
-				return "E-mail invalido!"
-			}
-		}
 	},
 
 	computed: {
@@ -46,7 +30,6 @@ var a = new Vue({
 				}
 				i++;
 			}
-
 			return "E-mail invalido!";
 		},
 
