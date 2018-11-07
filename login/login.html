@@ -15,7 +15,7 @@
 	<div id="app">
 		<v-app>
 		    <!-- essa tag gera o cabeçalho da pagina (olhe no arquivo includes/menu.js) -->
-		    <tool-box-login menutitle="Login"></tool-box-login>
+		    <header-login menutitle="Login"></header-login>
 		    
 		    <v-form>
 		        <v-container fluid>
@@ -47,11 +47,11 @@
             </v-flex>
 
             <v-flex>
-            	<v-btn color="error" onclick='window.location.replace("../cad_usuario/index_cad.html");'>Cadastrar-se</v-btn>
+            	<v-btn color="error" onclick='window.location.href = "../cad_usuario/index_cad.html";'>Cadastrar-se</v-btn>
             </v-flex>
 
 			      <v-flex>
-							<v-btn color="info" onclick='window.location.replace("../esqueci_senha/index_es.html");'>Esqueci minha senha</v-btn>
+							<v-btn color="info" onclick='window.location.href = "../esqueci_senha/index_es.html";'>Esqueci minha senha</v-btn>
 						</v-flex>
 					</v-layout>
 		    </v-container>

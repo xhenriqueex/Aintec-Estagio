@@ -110,7 +110,7 @@ var a = new Vue({
 			axios.post("cad_usu.php", params)
 			.then(response => {
 				if(response.data === 1) {
-					window.location.replace("../login/login.html");
+					window.location.href = "../login/login.html";
 				}
 				else if(response.data === 0) {
 					alert('Nome de Usuario já existente!');

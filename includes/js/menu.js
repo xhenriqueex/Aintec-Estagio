@@ -1,6 +1,6 @@
 // nesse arquivo fica a declaração das tags do cabeçalho das páginas
 
-Vue.component('tool-box-login', {
+Vue.component('header-login', {
     props: ['menutitle'],
     template: `
     <div id="toolbox">
@@ -11,7 +11,7 @@ Vue.component('tool-box-login', {
 `
 })
 
-Vue.component('tool-box-unlogged', {
+Vue.component('header-unlogged', {
     props: ['menutitle'],
     template: `
     <div id="toolbox">
@@ -19,15 +19,15 @@ Vue.component('tool-box-unlogged', {
             <v-toolbar-title>{{ menutitle }}</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items>
-                <v-btn flat onclick='window.location.replace("./login/login.html");'>Entrar</v-btn>
-                <v-btn flat onclick='window.location.replace("./cad_usuario/index_cad.html");'>Cadastrar-se</v-btn>
+                <v-btn flat onclick='window.location.href = "./login/login.html";'>Entrar</v-btn>
+                <v-btn flat onclick='window.location.href = "./cad_usuario/index_cad.html";'>Cadastrar-se</v-btn>
             </v-toolbar-items>
         </v-toolbar>
     </div>
 `
 })
 
-Vue.component('tool-box-logged', {
+Vue.component('header-logged', {
     data: function (){
         return {
             drawer: false,
@@ -45,7 +45,7 @@ Vue.component('tool-box-logged', {
 				params.append('switch', 'unlog');
 				axios.post("./includes/php/functions.php", params)
 				.then(() => {
-					window.location.replace("index.html");
+					window.location.href = "index.html";
 				})
 				.catch(error => {
 					console.log(error);

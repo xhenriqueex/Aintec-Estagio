@@ -10,7 +10,7 @@ var a = new Vue({
 					var params = new URLSearchParams();
 					params.append('login', this.usuario);
 					params.append('senha', this.senha);
-					
+
           axios.post("./login.php", params)
           .then(response => {
             if(response.data)

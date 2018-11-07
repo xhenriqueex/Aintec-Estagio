@@ -15,7 +15,7 @@
 <body>
 	<div id="app">
 		<v-app>
-			<tool-box-login menutitle="Cadastrar-se"></tool-box-login>
+			<header-login menutitle="Cadastrar-se"></header-login>
 			<v-form v-model="valid" ref="form">
 					<v-container fluid>
 						<!-- layout dos inputs -->
@@ -70,7 +70,7 @@
 								<v-btn color="success" @click="cadastrar()">Cadastrar-se</v-btn>
 							</v-flex>
 							<v-flex>
-								<v-btn color="error" onclick='window.location.replace("../login/login.html");'>Voltar</v-btn>
+								<v-btn color="error" onclick='window.location.href = "../login/login.html";'>Voltar</v-btn>
 							</v-flex>
 						</v-layout>
 					</v-container>
