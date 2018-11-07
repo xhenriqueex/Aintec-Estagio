@@ -13,34 +13,34 @@
 	<script src="../includes/menu.js"></script>
 </head>
 <body>
-		<div id="app">
-			<v-app>
-				<tool-box-login menutitle="Esqueci minha senha"></tool-box-login>
+	<div id="app">
+		<v-app>
+			<tool-box-login menutitle="Esqueci minha senha"></tool-box-login>
 
-				<v-container fluid>
-					Digite seu e-mail abaixo para ser enviado uma mensagem para mudança de sanha:
-					<v-flex xs4 sm4 md4 lg3>
-							<v-text-field
-									label="E-mail"
-									v-model="email"
-									:
-							></v-text-field>
-					</v-flex>
+			<v-container fluid>
+				Digite seu e-mail abaixo para ser enviado uma mensagem para mudança de sanha:
+				<v-flex xs4 sm4 md4 lg3>
+						<v-text-field
+								label="E-mail"
+								v-model="email"
+								:
+						></v-text-field>
+				</v-flex>
 
-					<v-btn >Enviar</v-btn>
-					<v-btn onclick='window.location.href = "../login/login.html";'>Voltar</v-btn>
-				</v-container>
-			</v-app>
-		</div>
+				<v-btn >Enviar</v-btn>
+				<v-btn onclick='window.location.href = "../login/login.html";'>Voltar</v-btn>
+			</v-container>
+		</v-app>
+	</div>
 
-		<script>
-			new Vue({
-				el: '#app',
+	<script>
+		new Vue({
+			el: '#app',
 
-				data: {
-					email: ''
-				}
-			})
-		</script>
+			data: {
+				email: ''
+			}
+		})
+	</script>
 </body>
 </html>

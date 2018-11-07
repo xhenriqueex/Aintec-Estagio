@@ -8,21 +8,21 @@ var a = new Vue({
 		senha: "",
 		conf_senha: "",
 
-		rules: {
-			required: value => !!value || "Campo obrigatório",
-			email: value => {
-				let i = 0;
+		// rules: {
+		// 	required: value => !!value || "Campo obrigatório",
+		// 	email: value => {
+		// 		let i = 0;
 
-				while(i < value.length) {
-					if(value[i] === '@') {
-						return true;
-					}
-					i++;
-				}
+		// 		while(i < value.length) {
+		// 			if(value[i] === '@') {
+		// 				return true;
+		// 			}
+		// 			i++;
+		// 		}
 
-				return "E-mail invalido!"
-			}
-		}
+		// 		return "E-mail invalido!"
+		// 	}
+		// }
 	},
 
 	computed: {
