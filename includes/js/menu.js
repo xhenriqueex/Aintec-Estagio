@@ -1,4 +1,33 @@
-Vue.component('tool-box', {
+// nesse arquivo fica a declaração das tags do cabeçalho das páginas
+
+Vue.component('tool-box-login', {
+    props: ['menutitle'],
+    template: `
+    <div id="toolbox">
+        <v-toolbar>
+            <v-toolbar-title>{{ menutitle }}</v-toolbar-title>
+        </v-toolbar>
+    </div>
+`
+})
+
+Vue.component('tool-box-unlogged', {
+    props: ['menutitle'],
+    template: `
+    <div id="toolbox">
+        <v-toolbar>
+            <v-toolbar-title>{{ menutitle }}</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+                <v-btn flat onclick='window.location.replace("./login/login.html");'>Entrar</v-btn>
+                <v-btn flat onclick='window.location.replace("./cad_usuario/index_cad.html");'>Cadastrar-se</v-btn>
+            </v-toolbar-items>
+        </v-toolbar>
+    </div>
+`
+})
+
+Vue.component('tool-box-logged', {
     data: function (){
         return {
             drawer: false,
@@ -6,10 +35,26 @@ Vue.component('tool-box', {
                 { title: "Pessoa física", icon: "", options: [["Consulta", "assignment"], ["Cadastrar", "person_add"]] },
                 { title: "Docente", icon: "", options: [["Consulta", "assignment"], ["Cadastrar", "person_add"]] },
                 { title: "Pessoa jurídica", icon: "", options: [["Consulta", "assignment"], ["Cadastrar", "person_add"]] }
-            ]
+						],
         };
-    },
-    props: ['menutitle', 'app'],
+		},
+
+		methods: {
+			exit: function() {
+				let params = new URLSearchParams();
+				params.append('switch', 'unlog');
+				axios.post("./includes/php/functions.php", params)
+				.then(() => {
+					window.location.replace("index.html");
+				})
+				.catch(error => {
+					console.log(error);
+				});
+			}
+		},
+
+		props: ['menutitle'],
+
     template: `
     <div id="toolbox">
         <v-toolbar>
@@ -17,7 +62,8 @@ Vue.component('tool-box', {
             <v-toolbar-title>{{ menutitle }}</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items>
-                <v-btn flat>Sair</v-btn>
+                <v-btn flat> <v-icon>person</v-icon> </v-btn>
+                <v-btn flat @click="exit()">Sair</v-btn>
             </v-toolbar-items>
         </v-toolbar>
         <v-navigation-drawer app
@@ -53,12 +99,3 @@ Vue.component('tool-box', {
     </div>
 `
 })
-
-new Vue({
-    el: '#app',
-
-    data: {
-        text: '',
-        aux: true,
-    }
-  })

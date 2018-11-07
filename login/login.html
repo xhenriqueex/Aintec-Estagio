@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-  <link href='../includes/icons.css' rel="stylesheet">
-  <link href="../includes/vuetify.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <script src="../includes/vue.js"></script>
-  <script src="../includes/vuetify.js"></script>
-  <script src="../includes/menu.js"></script>
+	<meta charset="UTF-8">
+	<link href='../includes/css/icons.css' rel="stylesheet">
+	<link href="../includes/css/vuetify.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<script src="../includes/js/vue.js"></script>
+	<script src="../includes/js/vuetify.js"></script>
+	<script src="../includes/js/axios.min.js"></script>
+	<script src="../includes/js/menu.js"></script>
+	<script src="../includes/js/functions.js"></script>
 </head>
 <body>
-  <div id="app">
-    <v-app>
-        <options menutitle="Login"></options>
-        <v-form>
-          <v-container fluid>
-            <v-layout align-center justify-center column>
+	<div id="app">
+		<v-app>
+		    <!-- essa tag gera o cabeçalho da pagina (olhe no arquivo includes/menu.js) -->
+		    <tool-box-login menutitle="Login"></tool-box-login>
+		    
+		    <v-form>
+		        <v-container fluid>
+					<!-- layout dos inputs -->
+			        <v-layout align-center justify-center column>
 
-                <v-flex xs4 sm4 md4 lg2>
-                    <v-text-field
-                        label="Usuário"
-                        value=""
-                    ></v-text-field>
-                </v-flex>
+						<!-- input do nome do usuário -->
+			            <v-flex xs4 sm4 md4 lg2>
+			                <v-text-field
+			                    label="Usuário"
+			                    v-model="usuario"
+			                ></v-text-field>
+			            </v-flex>
 
-                <v-flex xs4 sm4 md4 lg2>
-                    <v-text-field
-                        label="Senha"
-                        type="password"
-                        value=""
-                    ></v-text-field>
-                </v-flex>
-                
-                <v-flex lg1>
-                    <v-btn color="success">Entrar</v-btn>
-                </v-flex>
-            </v-layout>
-          </v-container>
-        </v-form>
-    </v-app>
-  </div>
+						<!-- input da senha -->
+			            <v-flex xs4 sm4 md4 lg2>
+			                <v-text-field
+			                    label="Senha"
+			                    type="password"
+			                    v-model="senha"
+			                ></v-text-field>
+									</v-flex>
+								</v-layout>
+						
+					<!-- layout dos botões -->
+					<v-layout align-center justify-center column>
+            <v-flex>
+							<v-btn color="success" @click="verificaExiste()">Entrar</v-btn>
+            </v-flex>
 
-  <script src="./login.js"></script>
+            <v-flex>
+            	<v-btn color="error" onclick='window.location.replace("../cad_usuario/index_cad.html");'>Cadastrar-se</v-btn>
+            </v-flex>
+
+			      <v-flex>
+							<v-btn color="info" onclick='window.location.replace("../esqueci_senha/index_es.html");'>Esqueci minha senha</v-btn>
+						</v-flex>
+					</v-layout>
+		    </v-container>
+		  </v-form>
+		</v-app>
+	</div>
+
+	<script src="login.js"></script>
 </body>
 </html>

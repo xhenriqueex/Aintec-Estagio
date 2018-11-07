@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='includes/icons.css' rel="stylesheet">
-  <link href="includes/vuetify.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<meta charset="UTF-8">
+	<link href='includes/css/icons.css' rel="stylesheet">
+	<link href="includes/css/vuetify.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<script src="./includes/js/vue.js"></script>
+	<script src="./includes/js/vuetify.js"></script>
+	<script src='./includes/js/axios.min.js'></script>
+	<script src="./includes/js/menu.js"></script>
 </head>
 <body>
-  <div id="app">
-    <v-app>
-        <options menutitle="Pagína Inicial"></options>
-        <v-form>
-          <v-container text-xs-center>
-            <v-layout row wrap aling-center justify-center>
-              <div class="font-weight-thin display-4">
-                Seja bem vindo à seila-o-que da Aintec
-              </div>
-            </v-layout>
-          </v-container>
-        </v-form>
-    </v-app>
-  </div>
+	<div id="app">
+		<v-app>
+			<!-- essa tag gera o cabeçalho da pagina (olhe no arquivo includes/js/menu.js) -->
+			<component
+				:is="toolBox"
+				menutitle="Pagina Inicial"
+			>
+			</component>
+		</v-app>
+	</div>
 
-  <script src="includes/vue.js"></script>
-  <script src="includes/vuetify.js"></script>
-  <script src="includes/menu.js"></script>
-  <script src='includes/axios.min.js'></script>
+	<script src="includes/js/verifica-login.js"></script>
+	<script>
+		let a = new Vue ({
+			el: "#app",
+
+			// data: {
+			// 	str: ''
+			// },
+
+			// computed: {
+			// 	toolBox: function() {
+			// 		axios.post("./includes/php/verifica_login.php", null)
+			// 		.then(response => {
+			// 			this.str = (response.data ? 'tool-box-logged' : 'tool-box-unlogged');
+			// 		})
+			// 		.catch(error => {
+			// 			console.log(error);
+			// 		});
+
+			// 		return this.str;
+			// 	}
+			// },
+		})
+	</script>
 </body>
 </html>
