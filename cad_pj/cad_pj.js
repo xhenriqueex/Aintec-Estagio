@@ -18,6 +18,25 @@ var a = new Vue({
 		}
 	},
 
+	methods: {
+		clean: function() {
+			this.pessoa.nome = '';
+			this.pessoa.cnpj = '';
+			this.endr.rua =  '';
+			this.endr.numero = '';
+			this.endr.compl = '';
+			this.endr.cep = '';
+			this.endr.cidade = '';
+			this.endr.estado = '';
+		},
+
+		header: function() {
+				if(window.login) {
+					return 'header-logged';
+				}
+			}
+	},
+
 	computed: {
 		validNome: function(){
 
@@ -51,21 +70,21 @@ var a = new Vue({
 
 		},
 
-		header: function() {
-			axios.post("/aintec/includes/php/verifica_login.php", null)
-			.then(response => {
-				if(response.data) {
-					this.str = 'header-logged';
-				}
-				else {
-					window.location.href = "/aintec/";
-				}
-			})
-			.catch(error => {
-				console.log(error);
-			});
+		// header: function() {
+		// 	axios.post("/aintec/includes/php/verifica_login.php", null)
+		// 	.then(response => {
+		// 		if(response.data) {
+		// 			this.str = 'header-logged';
+		// 		}
+		// 		else {
+		// 			window.location.href = "/aintec/";
+		// 		}
+		// 	})
+		// 	.catch(error => {
+		// 		console.log(error);
+		// 	});
 
-			return this.str;
-		}
+		// 	return this.str;
+		// }
 	}
 })

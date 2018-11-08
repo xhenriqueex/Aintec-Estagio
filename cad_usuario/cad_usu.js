@@ -30,6 +30,7 @@ var a = new Vue({
 				}
 				i++;
 			}
+
 			return "E-mail invalido!";
 		},
 
