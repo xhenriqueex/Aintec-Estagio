@@ -187,10 +187,10 @@
 						<!-- layout dos botões -->
 						<v-layout>
 							<v-flex>
-								<v-btn :disabled="verify" color="success" @click="salvar()">Salvar</v-btn>
+								<v-btn :disabled="verify" color="success" @click="salvar()">Cadastrar</v-btn>
 							</v-flex>
 							<v-flex>
-								<v-btn color="success" @click="erase()">Cancelar</v-btn>
+								<v-btn color="success" @click="erase()">Limpar</v-btn>
 							</v-flex>
 							<v-flex>
 								<v-btn color="error" onclick='window.location.replace("../index.php");'>Voltar</v-btn>
