@@ -1,3 +1,3 @@
 <?php
-    $bdcon3 = pg_connect("host=191.52.64.44 port=5433 dbname=aintec user=postgres password=postgres");
+    $bdcon3 = pg_connect("host=127.0.0.1 port=5433 dbname=aintec user=postgres password=postgres");
 ?>
