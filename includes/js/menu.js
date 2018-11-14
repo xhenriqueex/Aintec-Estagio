@@ -37,7 +37,7 @@ Vue.component('header-logged', {
                     icon: "",
                     options: [
                         ["Consulta", "assignment"],
-                        ["Cadastrar", "person_add", "/aintec/cad_pf/cad_pf.html"]
+                        ["Cadastrar", "person_add", "/aintec/cad_pf/cad_pf.php"]
                     ]
                 },
                 {

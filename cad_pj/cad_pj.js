@@ -29,12 +29,6 @@ var a = new Vue({
 			this.endr.cidade = '';
 			this.endr.estado = '';
 		},
-
-		header: function() {
-				if(window.login) {
-					return 'header-logged';
-				}
-			}
 	},
 
 	computed: {

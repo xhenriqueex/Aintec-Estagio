@@ -23,7 +23,7 @@
 	<div id="app">
 		<v-app>
 				<component
-				:is="header()"
+				is="header-logged"
 				menutitle="Cadastro de pessoa jurídica"
 			>
 			</component>

@@ -25,7 +25,6 @@
 			</component>
 		</v-app>
 	</div>
-
 	<script src="index.js"></script>
 </body>
 </html>
