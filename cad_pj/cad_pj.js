@@ -15,7 +15,9 @@ var a = new Vue({
 			cep: '',
 			cidade: '',
 			estado: ''
-		}
+		},
+		verifNome: '',
+		verifCnpj: ''
 	},
 
 	methods: {
@@ -33,11 +35,19 @@ var a = new Vue({
 
 	computed: {
 		validNome: function(){
-
+			if (this.nome.length === 0) {
+                this.valid = false;
+                return "Campo obrigatório";
+            }
+            this.verifNome = true;
 		},
 
 		validCnpj: function(){
-
+			if (this.cnpj.length === 0) {
+                this.valid = false;
+                return "Campo obrigatório";
+            }
+            this.verifCnpj = true;
 		},
 
 		validRua: function(){
@@ -63,6 +73,13 @@ var a = new Vue({
 		validEstado: function(){
 
 		},
+		verify: function () {
+            if (this.verifCnpj && this.verifNome)
+            {
+                return false;
+            }
+            return true;
+        }
 
 		// header: function() {
 		// 	axios.post("/aintec/includes/php/verifica_login.php", null)

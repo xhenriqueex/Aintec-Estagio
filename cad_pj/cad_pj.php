@@ -118,7 +118,7 @@
 						<!-- layout dos botões -->
 						<v-layout>
 							<v-flex>
-								<v-btn color="success" @click="">Cadastrar</v-btn>
+								<v-btn :disabled="verify" color="success" @click="">Cadastrar</v-btn>
 							</v-flex>
 							<v-flex>
 								<v-btn color="error" onclick='window.location.href = "../index.php";'>Voltar</v-btn>
