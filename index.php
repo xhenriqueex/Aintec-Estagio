@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+	require "./includes/php/verifica_login.php";
+?>
+
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -15,36 +19,12 @@
 		<v-app>
 			<!-- essa tag gera o cabeçalho da pagina (olhe no arquivo includes/js/menu.js) -->
 			<component
-				:is="header"
+				:is="header()"
 				menutitle="Pagina Inicial"
 			>
 			</component>
 		</v-app>
 	</div>
-
-	<!-- <script src="includes/js/verifica-login.js"></script> -->
-	<script>
-		let a = new Vue ({
-			el: "#app",
-
-			data: {
-				str: ''
-			},
-
-			computed: {
-				header: function() {
-					axios.post("./includes/php/verifica_login.php", null)
-					.then(response => {
-						this.str = (response.data ? 'header-logged' : 'header-unlogged');
-					})
-					.catch(error => {
-						console.log(error);
-					});
-
-					return this.str;
-				}
-			},
-		})
-	</script>
+	<script src="index.js"></script>
 </body>
 </html>

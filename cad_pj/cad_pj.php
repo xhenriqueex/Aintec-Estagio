@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<?php
+	require "../includes/php/verifica_login.php";
+?>
+<script>
+	if(!window.login) {
+		alert("Faça login para acessar essa página!");
+		window.location.href = "/aintec/";
+	}
+</script>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -9,25 +18,13 @@
 	<script src="../includes/js/vuetify.js"></script>
 	<script src='../includes/js/axios.min.js'></script>
 	<script src="../includes/js/menu.js"></script>
-	<script>
-		axios.post("/aintec/includes/php/verifica_login.php", null)
-			.then(response => {
-				if(!response.data) {
-					alert("Você não está logado! Realize login para acessar essa página!");
-					window.location.href = "/aintec/";
-				}
-			})
-			.catch(error => {
-				console.log(error);
-			});
-	</script>
 </head>
 <body>
 	<div id="app">
 		<v-app>
 				<component
-				:is="header"
-				menutitle="Pagina Inicial"
+				is="header-logged"
+				menutitle="Cadastro de pessoa jurídica"
 			>
 			</component>
 			<v-form v-model="valid" ref="form">
@@ -91,6 +88,7 @@
 								<v-text-field
 									label="CEP"
 									v-model="endr.cep"
+									mask="##.###-###"
 									:error-messages='validCep'
 									required
 								></v-text-field>
@@ -120,13 +118,13 @@
 						<!-- layout dos botões -->
 						<v-layout>
 							<v-flex>
-								<v-btn color="success" @click="cadastrar()">Cadastrar</v-btn>
+								<v-btn color="success" @click="">Cadastrar</v-btn>
 							</v-flex>
 							<v-flex>
 								<v-btn color="error" onclick='window.location.href = "../index.html";'>Voltar</v-btn>
 							</v-flex>
 							<v-flex>
-								<v-btn color="error" onclick=''>Limpar</v-btn>
+								<v-btn color="error" @click='clean'>Limpar</v-btn>
 							</v-flex>
 						</v-layout>
 					</v-container>

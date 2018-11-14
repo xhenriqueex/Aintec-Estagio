@@ -37,7 +37,7 @@ Vue.component('header-logged', {
                     icon: "",
                     options: [
                         ["Consulta", "assignment"],
-                        ["Cadastrar", "person_add"]
+                        ["Cadastrar", "person_add", "/aintec/cad_pf/cad_pf.php"]
                     ]
                 },
                 {
@@ -53,7 +53,7 @@ Vue.component('header-logged', {
                     icon: "",
                     options: [
                         ["Consulta", "assignment"],
-                        ["Cadastrar", "person_add", "/aintec/cad_pj/cad_pj.html"]
+                        ["Cadastrar", "person_add", "/aintec/cad_pj/cad_pj.php"]
                     ]
                 }
 			],
@@ -66,7 +66,7 @@ Vue.component('header-logged', {
 				params.append('switch', 'unlog');
 				axios.post("/aintec/includes/php/functions.php", params)
 				.then(() => {
-					window.location.href = "/aintec/index.html";
+					window.location.href = "/aintec/index.php";
 				})
 				.catch(error => {
 					console.log(error);

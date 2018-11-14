@@ -15,7 +15,7 @@ var a = new Vue({
           .then(response => {
             if(response.data)
             {
-            	window.location.href = "../index.html";
+            	window.location.href = "../index.php";
             }else
             {
               alert("Usuario ou senha inválido!");
