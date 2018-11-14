@@ -193,7 +193,7 @@
 								<v-btn color="success" @click="erase()">Cancelar</v-btn>
 							</v-flex>
 							<v-flex>
-								<v-btn color="error" onclick='window.location.replace("../index.html");'>Voltar</v-btn>
+								<v-btn color="error" onclick='window.location.replace("../index.php");'>Voltar</v-btn>
 							</v-flex>
 						</v-layout>
 					</v-container>

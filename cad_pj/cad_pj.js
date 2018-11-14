@@ -33,11 +33,19 @@ var a = new Vue({
 
 	computed: {
 		validNome: function(){
-
+			if (this.nome.length === 0) {
+                this.valid = false;
+                return "Campo obrigatório";
+            }
+            this.verifNome = true;
 		},
 
 		validCnpj: function(){
-
+			if (this.cnpj.length === 0) {
+                this.valid = false;
+                return "Campo obrigatório";
+            }
+            this.verifNome = true;
 		},
 
 		validRua: function(){
