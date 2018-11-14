@@ -3,6 +3,7 @@ var a = new Vue({
 
     data: {
         valid: false,
+        id: -1,
         str: "",
         nome: "",
         rg: "",
@@ -26,16 +27,6 @@ var a = new Vue({
     },
 
     computed: {
-        header: function() {
-            axios.post ("/aintec/includes/php/verifica_login.php", null)
-            .then (response => {
-                this.str = (response.data ? 'header-logged' : 'header-unlogged');
-            })
-            .catch (error => {
-                console.log (error);
-            });
-            return this.str;
-        },
         validNome: function () {
             if (this.nome.length === 0) {
                 this.valid = false;
@@ -116,6 +107,40 @@ var a = new Vue({
     },
 
     methods: {
+        salvar: function() {
+            var params = new URLSearchParams();
+            params.append('nome', this.nome);
+            params.append('rg', this.rg);
+            params.append('dataExp', this.dataExp);
+            params.append('orgExp', this.orgExp);
+            params.append('cpf', this.cpf);
+            params.append('email', this.email);
+            params.append('telefone', this.telefone);
+            params.append('celular', this.celular);
+            params.append('rua', this.rua);
+            params.append('numero', this.numero);
+            params.append('complemento', this.complemento);
+            params.append('cep', this.cep);
+            params.append('estado', this.estado);
+            params.append('cidade', this.cidade);
+
+            if(id == -1)
+            {
+                params.append('switch', "criar");
+                axios.post("save_pf.php", params)
+                .then(response => {
+
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            }
+            else
+            {
+                axios.post();
+            }
+        },
+
         erase: function () {
             this.nome = "";
             this.rg = "";

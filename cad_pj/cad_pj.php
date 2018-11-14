@@ -121,7 +121,7 @@
 								<v-btn color="success" @click="">Cadastrar</v-btn>
 							</v-flex>
 							<v-flex>
-								<v-btn color="error" onclick='window.location.href = "../index.html";'>Voltar</v-btn>
+								<v-btn color="error" onclick='window.location.href = "../index.php";'>Voltar</v-btn>
 							</v-flex>
 							<v-flex>
 								<v-btn color="error" @click='clean'>Limpar</v-btn>
